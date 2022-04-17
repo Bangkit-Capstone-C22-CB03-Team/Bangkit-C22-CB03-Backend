@@ -22,9 +22,9 @@ Mario Hagi | M2191F1819 | Machine Learning
 Alheta Wahyu Matalarens |  A2110F1435 | Mobile Development
 Ary Bayu Nurwicaksono | A2183F1767 | Mobile Development
 Hafit Abekrori | A7183F1768 | Mobile Development
-Muhammad Acla Alamsyah Nurdin Hamzah | C2307F2632 | Cloud Computer
-Aimar Anand | C2323J2836 | Cloud Computer
-Ariel Peaceo Gunawan | C7005F0459 | Cloud Computer
+Muhammad Acla Alamsyah Nurdin Hamzah | C2307F2632 | Cloud Computing
+Aimar Anand | C2323J2836 | Cloud Computing
+Ariel Peaceo Gunawan | C7005F0459 | Cloud Computing
 
 ## What is this? (*coming soon*)
 
