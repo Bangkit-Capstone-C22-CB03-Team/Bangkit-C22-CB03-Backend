@@ -1,4 +1,5 @@
 # gitignore format:
 #  https://help.github.com/articles/ignoring-files/
 
-.venv/
+# python virtualenv, size too large of course
+venv

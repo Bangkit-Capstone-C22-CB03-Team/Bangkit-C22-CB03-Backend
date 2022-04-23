@@ -9,6 +9,7 @@ Our team Consist of 9 people.
 - [Bangkit-C22CB-Company-Based-Capstone](#bangkit-c22cb-company-based-capstone)
   - [The Boys](#the-boys)
   - [What is this? (*coming soon*)](#what-is-this-coming-soon)
+  - [Editing Architecture Chart](#editing-architecture-chart)
   - [Running Our Project in Local](#running-our-project-in-local)
     - [Install the dependencies](#install-the-dependencies)
 
@@ -30,16 +31,23 @@ Ariel Peaceo Gunawan | C7005F0459 | Cloud Computing
 
 TBA
 
+## Editing Architecture Chart
+
+Use [Draw.IO]([https://link](https://app.diagrams.net/)) to create our architecture chart, use this VScode Extension to edit our diagram inside the editor: [Draw.io Integration in VSCode](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio)
+
 ## Running Our Project in Local
 
 ### Install the dependencies
 
 It's advised for machine learning aspect to use virtual environment to working with this project, this is to prevent incompatibilities with other contributors.
 
+If you are still activate Conda, you can deactivate it by typing `conda deactivate`.
+
 in the repo's directory, run the following commands one by one:
 
 ```bash
 python3 -m pip install --upgrade pip
-python3 -m venv env
+python3 -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
 ```
