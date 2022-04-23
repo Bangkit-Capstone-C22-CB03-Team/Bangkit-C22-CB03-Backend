@@ -13,6 +13,7 @@ Our team Consist of 9 people.
   - [Running Our Project in Local](#running-our-project-in-local)
     - [Using Conda (easier to build)](#using-conda-easier-to-build)
     - [Using PIP (not recommended, still experimental)](#using-pip-not-recommended-still-experimental)
+  - [References](#references)
 
 ## The Boys
 
@@ -70,3 +71,7 @@ python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 ```
+
+## References
+
+- [TensorFlow and Transformers (Medium)]([https://link](https://towardsdatascience.com/tensorflow-and-transformers-df6fceaf57cc))
