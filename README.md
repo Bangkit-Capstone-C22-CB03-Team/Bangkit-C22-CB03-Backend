@@ -11,7 +11,9 @@ Our team Consist of 9 people.
   - [What is this? (*coming soon*)](#what-is-this-coming-soon)
   - [Editing Architecture Chart](#editing-architecture-chart)
   - [Running Our Project in Local](#running-our-project-in-local)
-    - [Install the dependencies](#install-the-dependencies)
+    - [Using Conda (easier to build)](#using-conda-easier-to-build)
+    - [Using PIP (not recommended, still experimental)](#using-pip-not-recommended-still-experimental)
+  - [References](#references)
 
 ## The Boys
 
@@ -37,7 +39,25 @@ Use [Draw.IO]([https://link](https://app.diagrams.net/)) to create our architect
 
 ## Running Our Project in Local
 
-### Install the dependencies
+### Using Conda (easier to build)
+
+if you are using conda, you can install our project using the following command:
+
+```bash
+conda create --name bangkit_capstone python=3.9
+conda activate bangkit_capstone
+pip install ipykernel
+```
+
+or this command if you are want to specify the path of the environment
+
+```bash
+conda create --prefix ./venv/ python=3.9
+conda activate ./venv/
+pip install ipykernel
+```
+
+### Using PIP (not recommended, still experimental)
 
 It's advised for machine learning aspect to use virtual environment to working with this project, this is to prevent incompatibilities with other contributors.
 
@@ -51,3 +71,7 @@ python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 ```
+
+## References
+
+- [TensorFlow and Transformers (Medium)]([https://link](https://towardsdatascience.com/tensorflow-and-transformers-df6fceaf57cc))
