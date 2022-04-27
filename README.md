@@ -74,4 +74,5 @@ pip install -r requirements.txt
 
 ## References
 
-- [TensorFlow and Transformers (Medium)]([https://link](https://towardsdatascience.com/tensorflow-and-transformers-df6fceaf57cc))
+- [TensorFlow and Transformers (Medium)](https://towardsdatascience.com/tensorflow-and-transformers-df6fceaf57cc)
+- [AjulorC's question answering bot](https://huggingface.co/spaces/AjulorC/question_answering_bot_deployed_with_Gradio)
