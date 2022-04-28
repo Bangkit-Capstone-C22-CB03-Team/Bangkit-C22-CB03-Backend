@@ -1,0 +1,6 @@
+.venv
+venv
+key.json
+__pycache__/
+instance/
+.webassets-cache
