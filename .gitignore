@@ -3,3 +3,9 @@
 
 # python virtualenv, size too large of course
 venv/
+.env
+.venv
+key.json
+__pycache__/
+instance/
+.webassets-cache
