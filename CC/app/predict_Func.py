@@ -7,7 +7,7 @@ from transformers import TFAutoModelForQuestionAnswering, AutoTokenizer
 def predict_func(context):
   
   tokenizer = AutoTokenizer.from_pretrained("bert-large-uncased-whole-word-masking-finetuned-squad")
-  model = TFAutoModelForQuestionAnswering.from_pretrained("new_model_directory", return_dict = False)
+  model = TFAutoModelForQuestionAnswering.from_pretrained("bert-large-uncased-whole-word-masking-finetuned-squad", return_dict = False)
 
   question = 'what country amazon forest is mostly in?'
 
