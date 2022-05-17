@@ -1,16 +1,25 @@
-from flask import Flask, request
-from flask_restful import Resource, Api
+#! python
+from flask import Flask
+
+from flask_restful import Resource, Api, reqparse
+
+from predict_Func import predict_func
 
 app = Flask(__name__)
 api = Api(app)
 
-# simple get rest api - test it by writing this on terminal with curl http://127.0.0.0:5000/
-# or open this link http://127.0.0.0:5000/
-class HelloWorld(Resource):
-    def get(self):
-        return {'hello': 'world'}
 
-api.add_resource(HelloWorld, '/')
+class TestPredict(Resource):
+    def post(self):
+        parser = reqparse.RequestParser()
+        parser.add_argument(
+            'chat', type=str, help='Cannot be empty', required=True)
+        args = parser.parse_args()
+        answer, confidence = predict_func(args['chat'])
+        return {'status': 'success', 'answer': answer, 'confidence': confidence}
+
+
+api.add_resource(TestPredict, '/')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
