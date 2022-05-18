@@ -1,5 +1,7 @@
 # Bangkit-C22CB-Company-Based-Capstone
 
+[![CodeFactor](https://www.codefactor.io/repository/github/dhupee/bangkit-c22cb-company-based-capstone/badge)](https://www.codefactor.io/repository/github/dhupee/bangkit-c22cb-company-based-capstone)
+
 ![Bangkit](https://lh3.googleusercontent.com/J2QI0L3vJwv63Sm3isI90ctxuxznz67dAtJQN2vu7wnUuwt9Wc-WI7VuIhwvr0yVrDPfc7kBN5usZz75nDW_k96pCfcZBxnfNzvVS0g=w600)
 
 This is our repository for Company Based Capstone.
