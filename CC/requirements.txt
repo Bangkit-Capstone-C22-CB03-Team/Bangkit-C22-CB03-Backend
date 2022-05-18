@@ -14,3 +14,5 @@ pytz==2022.1
 six==1.16.0
 SQLAlchemy==1.4.36
 Werkzeug==2.1.2
+transformers==4.18.0
+tensorflow==2.8.0
