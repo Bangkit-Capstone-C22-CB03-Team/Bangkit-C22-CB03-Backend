@@ -1,0 +1,178 @@
+{
+    "version": "v2.0",
+    "data": [
+        {
+            "title": "orang Normandia",
+            "paragraphs": [
+                {
+                    "qas": [
+                        {
+                            "question": "Di negara manakah Normandia berada?",
+                            "id": "56ddde6b9a695914005b9628",
+                            "answers": [
+                                {
+                                    "text": "Perancis",
+                                    "answer_start": 159
+                                },
+                                {
+                                    "text": "Perancis",
+                                    "answer_start": 159
+                                },
+                                {
+                                    "text": "Perancis",
+                                    "answer_start": 159
+                                },
+                                {
+                                    "text": "Perancis",
+                                    "answer_start": 159
+                                }
+                            ],
+                            "is_impossible": false
+                        },
+                        {
+                            "question": "Kapan orang Normandia di Normandia?",
+                            "id": "56ddde6b9a695914005b9629",
+                            "answers": [
+                                {
+                                    "text": "abad 10 dan 11",
+                                    "answer_start": 94
+                                },
+                                {
+                                    "text": "pada abad 10 dan 11",
+                                    "answer_start": 87
+                                },
+                                {
+                                    "text": "abad 10 dan 11",
+                                    "answer_start": 94
+                                },
+                                {
+                                    "text": "abad 10 dan 11",
+                                    "answer_start": 94
+                                }
+                            ],
+                            "is_impossible": false
+                        },
+                        {
+                            "question": "Dari negara mana orang Nordik berasal?",
+                            "id": "56ddde6b9a695914005b962a",
+                            "answers": [
+                                {
+                                    "text": "Denmark, Islandia dan Norwegia",
+                                    "answer_start": 256
+                                },
+                                {
+                                    "text": "Denmark, Islandia dan Norwegia",
+                                    "answer_start": 256
+                                },
+                                {
+                                    "text": "Denmark, Islandia dan Norwegia",
+                                    "answer_start": 256
+                                },
+                                {
+                                    "text": "Denmark, Islandia dan Norwegia",
+                                    "answer_start": 256
+                                }
+                            ],
+                            "is_impossible": false
+                        },
+                        {
+                            "question": "Siapa pemimpin Norse?",
+                            "id": "56ddde6b9a695914005b962b",
+                            "answers": [
+                                {
+                                    "text": "Rollo",
+                                    "answer_start": 308
+                                },
+                                {
+                                    "text": "Rollo",
+                                    "answer_start": 308
+                                },
+                                {
+                                    "text": "Rollo",
+                                    "answer_start": 308
+                                },
+                                {
+                                    "text": "Rollo",
+                                    "answer_start": 308
+                                }
+                            ],
+                            "is_impossible": false
+                        },
+                        {
+                            "question": "Abad berapa orang Normandia pertama kali mendapatkan identitas mereka yang terpisah?",
+                            "id": "56ddde6b9a695914005b962c",
+                            "answers": [
+                                {
+                                    "text": "abad ke-10",
+                                    "answer_start": 671
+                                },
+                                {
+                                    "text": "paruh pertama abad ke-10",
+                                    "answer_start": 649
+                                },
+                                {
+                                    "text": "tanggal 10",
+                                    "answer_start": 671
+                                },
+                                {
+                                    "text": "tanggal 10",
+                                    "answer_start": 671
+                                }
+                            ],
+                            "is_impossible": false
+                        },
+                        {
+                            "plausible_answers": [
+                                {
+                                    "text": "orang Normandia",
+                                    "answer_start": 4
+                                }
+                            ],
+                            "question": "Siapa yang memberi nama mereka ke Normandia di tahun 1000-an dan 1100-an?",
+                            "id": "5ad39d53604f3c001a3fe8d1",
+                            "answers": [],
+                            "is_impossible": true
+                        },
+                        {
+                            "plausible_answers": [
+                                {
+                                    "text": "Normandia",
+                                    "answer_start": 137
+                                }
+                            ],
+                            "question": "Perancis merupakan wilayah?",
+                            "id": "5ad39d53604f3c001a3fe8d2",
+                            "answers": [],
+                            "is_impossible": true
+                        },
+                        {
+                            "plausible_answers": [
+                                {
+                                    "text": "Rollo",
+                                    "answer_start": 308
+                                }
+                            ],
+                            "question": "Kepada siapa Raja Charles III bersumpah setia?",
+                            "id": "5ad39d53604f3c001a3fe8d3",
+                            "answers": [],
+                            "is_impossible": true
+                        },
+                        {
+                            "plausible_answers": [
+                                {
+                                    "text": "abad ke-10",
+                                    "answer_start": 671
+                                }
+                            ],
+                            "question": "Kapan identitas orang Franka muncul?",
+                            "id": "5ad39d53604f3c001a3fe8d4",
+                            "answers": [],
+                            "is_impossible": true
+                        }
+                    ],
+                    "context": "Gaya pound memiliki padanan metrik, lebih jarang digunakan daripada newton: gaya kilogram (kgf) (kadang-kadang kilopond), adalah gaya yang diberikan oleh gravitasi standar pada satu kilogram massa. Gaya kilogram mengarah ke satuan massa alternatif, tetapi jarang digunakan: slug metrik (kadang-kadang mug atau hyl) adalah massa yang berakselerasi pada 1 m·s−2 ketika dikenai gaya 1 kgf. Gaya kilogram bukan bagian dari sistem SI modern, dan umumnya tidak digunakan lagi; namun masih digunakan untuk beberapa tujuan seperti menyatakan bobot pesawat, daya dorong jet, tegangan jari-jari sepeda, pengaturan kunci pas torsi, dan torsi keluaran mesin. Satuan gaya misterius lainnya termasuk sthène, yang setara dengan 1000 N, dan kip, yang setara dengan 1000 lbf."
+                }
+            ]
+        }
+    ]
+}
