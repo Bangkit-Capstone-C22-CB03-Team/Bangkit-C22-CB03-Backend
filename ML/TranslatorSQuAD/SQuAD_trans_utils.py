@@ -20,12 +20,12 @@ def split_list(lst, length):
 def create_batch_dict(lst, length):
     """Convert list of list into dictionary and creates new keys called batch1 to batch split-length"""
     split=list(split_list(lst, length))
-    dict = {}
+    dict_batch = {}
     x = 1
     for batches in split:
-        dict[f"batch{x}"] = batches
+        dict_batch[f"batch{x}"] = batches
         x += 1
-    return dict
+    return dict_batch
 
 dirname = os.path.dirname(os.path.abspath(__file__))
 json_source = os.path.join(dirname, 'SourceFile', 'dev-v2.0.json')
@@ -46,10 +46,3 @@ for batch in batchs:
     print(batch)
     print(vars()[batch])
     print ('')
-
-
-
-
-
-
-
