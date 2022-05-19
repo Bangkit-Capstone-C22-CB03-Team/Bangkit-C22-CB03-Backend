@@ -1,3 +1,0 @@
-{
-    "chat": "How wide amazon is?"
-}
