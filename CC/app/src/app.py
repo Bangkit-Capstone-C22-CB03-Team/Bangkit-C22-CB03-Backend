@@ -11,9 +11,12 @@ class TestPredict(Resource):
     def post(self):
         parser = reqparse.RequestParser()
         parser.add_argument(
-            'chat', type=str, help='Cannot be empty', required=True)
+            'msg', type=str, help='Cannot be empty', required=True,location='args')
+            # location : body = "form"
+            # location : querystring = "args"
+            # location : headers = "headers"
         args = parser.parse_args()
-        answer, confidence = predict_func(args['chat'])
+        answer, confidence = predict_func(args['msg'])
         if(confidence< 0.5):
             return {'status': 'failed', 'answer': answer, 'confidence': confidence},404
         return {'status': 'success', 'answer': answer, 'confidence': confidence},200
