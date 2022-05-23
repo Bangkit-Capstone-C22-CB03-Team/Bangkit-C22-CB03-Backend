@@ -17,7 +17,7 @@ class TestPredict(Resource):
             # location : headers = "headers"
         args = parser.parse_args()
         answer, confidence = predict_func(args['msg'])
-        if(confidence< 0.5):
+        if(confidence< 0.1):
             return {'status': 'failed', 'answer': answer, 'confidence': confidence},404
         return {'status': 'success', 'answer': answer, 'confidence': confidence},200
     
