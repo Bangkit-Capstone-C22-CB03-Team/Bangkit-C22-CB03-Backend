@@ -1,0 +1,178 @@
+{
+  "version": "v2.0",
+  "data": [
+    {
+      "title": "Normans",
+      "paragraphs": [
+        {
+          "qas": [
+            {
+              "question": "In what country is Normandy located?",
+              "id": "56ddde6b9a695914005b9628",
+              "answers": [
+                {
+                  "text": "France",
+                  "answer_start": 159
+                },
+                {
+                  "text": "France",
+                  "answer_start": 159
+                },
+                {
+                  "text": "France",
+                  "answer_start": 159
+                },
+                {
+                  "text": "France",
+                  "answer_start": 159
+                }
+              ],
+              "is_impossible": false
+            },
+            {
+              "question": "When were the Normans in Normandy?",
+              "id": "56ddde6b9a695914005b9629",
+              "answers": [
+                {
+                  "text": "10th and 11th centuries",
+                  "answer_start": 94
+                },
+                {
+                  "text": "in the 10th and 11th centuries",
+                  "answer_start": 87
+                },
+                {
+                  "text": "10th and 11th centuries",
+                  "answer_start": 94
+                },
+                {
+                  "text": "10th and 11th centuries",
+                  "answer_start": 94
+                }
+              ],
+              "is_impossible": false
+            },
+            {
+              "question": "From which countries did the Norse originate?",
+              "id": "56ddde6b9a695914005b962a",
+              "answers": [
+                {
+                  "text": "Denmark, Iceland and Norway",
+                  "answer_start": 256
+                },
+                {
+                  "text": "Denmark, Iceland and Norway",
+                  "answer_start": 256
+                },
+                {
+                  "text": "Denmark, Iceland and Norway",
+                  "answer_start": 256
+                },
+                {
+                  "text": "Denmark, Iceland and Norway",
+                  "answer_start": 256
+                }
+              ],
+              "is_impossible": false
+            },
+            {
+              "question": "Who was the Norse leader?",
+              "id": "56ddde6b9a695914005b962b",
+              "answers": [
+                {
+                  "text": "Rollo",
+                  "answer_start": 308
+                },
+                {
+                  "text": "Rollo",
+                  "answer_start": 308
+                },
+                {
+                  "text": "Rollo",
+                  "answer_start": 308
+                },
+                {
+                  "text": "Rollo",
+                  "answer_start": 308
+                }
+              ],
+              "is_impossible": false
+            },
+            {
+              "question": "What century did the Normans first gain their separate identity?",
+              "id": "56ddde6b9a695914005b962c",
+              "answers": [
+                {
+                  "text": "10th century",
+                  "answer_start": 671
+                },
+                {
+                  "text": "the first half of the 10th century",
+                  "answer_start": 649
+                },
+                {
+                  "text": "10th",
+                  "answer_start": 671
+                },
+                {
+                  "text": "10th",
+                  "answer_start": 671
+                }
+              ],
+              "is_impossible": false
+            },
+            {
+              "plausible_answers": [
+                {
+                  "text": "Normans",
+                  "answer_start": 4
+                }
+              ],
+              "question": "Who gave their name to Normandy in the 1000's and 1100's",
+              "id": "5ad39d53604f3c001a3fe8d1",
+              "answers": [],
+              "is_impossible": true
+            },
+            {
+              "plausible_answers": [
+                {
+                  "text": "Normandy",
+                  "answer_start": 137
+                }
+              ],
+              "question": "What is France a region of?",
+              "id": "5ad39d53604f3c001a3fe8d2",
+              "answers": [],
+              "is_impossible": true
+            },
+            {
+              "plausible_answers": [
+                {
+                  "text": "Rollo",
+                  "answer_start": 308
+                }
+              ],
+              "question": "Who did King Charles III swear fealty to?",
+              "id": "5ad39d53604f3c001a3fe8d3",
+              "answers": [],
+              "is_impossible": true
+            },
+            {
+              "plausible_answers": [
+                {
+                  "text": "10th century",
+                  "answer_start": 671
+                }
+              ],
+              "question": "When did the Frankish identity emerge?",
+              "id": "5ad39d53604f3c001a3fe8d4",
+              "answers": [],
+              "is_impossible": true
+            }
+          ],
+          "context": "The pound-force has a metric counterpart, less commonly used than the newton: the kilogram-force (kgf) (sometimes kilopond), is the force exerted by standard gravity on one kilogram of mass. The kilogram-force leads to an alternate, but rarely used unit of mass: the metric slug (sometimes mug or hyl) is that mass that accelerates at 1 m·s−2 when subjected to a force of 1 kgf. The kilogram-force is not a part of the modern SI system, and is generally deprecated; however it still sees use for some purposes as expressing aircraft weight, jet thrust, bicycle spoke tension, torque wrench settings and engine output torque. Other arcane units of force include the sthène, which is equivalent to 1000 N, and the kip, which is equivalent to 1000 lbf."
+        }
+      ]
+    }
+  ]
+}

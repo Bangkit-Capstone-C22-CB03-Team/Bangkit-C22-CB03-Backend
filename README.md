@@ -19,17 +19,17 @@ Our team Consist of 9 people.
 
 ## The Boys
 
-Name | Bangkit ID | Learning Path
-:---|:---:|---:
-Ananda Daffa Abdillah | M2008G0791 | Machine Learning
-Daffa Haj Tsaqif| M2008G0792 | Machine Learning
-Mario Hagi | M2191F1819 | Machine Learning
-Alheta Wahyu Matalarens |  A2110F1435 | Mobile Development
+Name | Bangkit ID | Learning Path | Github Profile
+:---|:---:|:---:|---:
+Ananda Daffa Abdillah | M2008G0791 | Machine Learning | [Profile](https://github.com/Anandadaffa)
+Daffa Haj Tsaqif| M2008G0792 | Machine Learning | [Profile](https://https://github.com/dhupee)
+Mario Hagi | M2191F1819 | Machine Learning | [Profile](https://github.com/mariohagi)
+Alheta Wahyu Matalarens |  A2110F1435 | Mobile Development | [Profile](https://github.com/ZenMachi)
 Ary Bayu Nurwicaksono | A2183F1767 | Mobile Development
-Hafit Abekrori | A7183F1768 | Mobile Development
-Muhammad Acla Alamsyah Nurdin Hamzah | C2307F2632 | Cloud Computing
-Aimar Anand | C2323J2836 | Cloud Computing
-Ariel Peaceo Gunawan | C7005F0459 | Cloud Computing
+Hafit Abekrori | A7183F1768 | Mobile Development | [Profile](https://github.com/Haf0)
+Muhammad Acla Alamsyah Nurdin Hamzah | C2307F2632 | Cloud Computing | [Profile](https://github.com/Aclaputra)
+Aimar Anand | C2323J2836 | Cloud Computing | [Profile](https://github.com/imar6teen)
+Ariel Peaceo Gunawan | C7005F0459 | Cloud Computing | [Profile](https://github.com/Kouci01)
 
 ## What is this? (*coming soon*)
 
@@ -78,3 +78,4 @@ pip install -r requirements.txt
 
 - [TensorFlow and Transformers (Medium)](https://towardsdatascience.com/tensorflow-and-transformers-df6fceaf57cc)
 - [AjulorC's question answering bot](https://huggingface.co/spaces/AjulorC/question_answering_bot_deployed_with_Gradio)
+- [Smaller, faster, cheaper, lighter: Introducing DistilBERT, a distilled version of BERT](https://medium.com/huggingface/distilbert-8cf3380435b5)
