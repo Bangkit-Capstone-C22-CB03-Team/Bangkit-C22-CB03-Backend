@@ -6,7 +6,7 @@ from SQuAD_trans_utils import get_titles, create_batch_dict
 
 # Hyperparameter
 dirname = os.path.dirname(os.path.abspath(__file__))
-json_source = os.path.join(dirname, 'SourceFile', 'dev-v2.0.json')
+json_source = os.path.join(dirname, 'SourceJSON', 'dev-v2.0.json')
 json_dest = os.path.join(dirname, 'Translated', 'dev-v2.0_indo.json')
 lang_source = 'en'
 lang_dest = 'id'
