@@ -20,13 +20,18 @@ def json_to_df(data):
             qas = key['qas']
             context = key['context']
             for key in qas:
+                input_id = key['id']
                 question = key['question']
                 answers = key['answers']
                 for keys in answers:
                     text = keys['text']
+                    answer_start = keys['answer_start']
                     dataset_df = dataset_df.append({
+                        'input_id': input_id,
                         'title': title,
                         'context': context,
                         'question': question,
-                        'answer': text}, ignore_index=True)
+                        'answer_text': text,
+                        'answer_start': answer_start
+                        }, ignore_index=True)
     return dataset_df
