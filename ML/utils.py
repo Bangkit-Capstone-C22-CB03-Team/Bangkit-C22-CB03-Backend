@@ -25,7 +25,7 @@ def json_to_df(data):
                 answers = key['answers']
                 for keys in answers:
                     text = keys['text']
-                    answer_start = keys['answer_start']
+                    answer_start = int(keys['answer_start'])
                     dataset_df = dataset_df.append({
                         'input_id': input_id,
                         'title': title,
