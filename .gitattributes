@@ -1,1 +1,1 @@
-*.json filter=lfs diff=lfs merge=lfs -text
+hf_train-v2.0_indo.json filter=lfs diff=lfs merge=lfs -text
