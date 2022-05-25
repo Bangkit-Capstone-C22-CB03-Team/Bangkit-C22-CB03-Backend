@@ -1,4 +1,5 @@
 #! python
+import os
 from flask import Flask
 from flask_restful import Resource, Api, reqparse
 
@@ -28,4 +29,4 @@ class TestPredict(Resource):
 api.add_resource(TestPredict, '/')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080)
+    app.run(host='0.0.0.0', port=int(os.environ.get("PORT", 8080)))
