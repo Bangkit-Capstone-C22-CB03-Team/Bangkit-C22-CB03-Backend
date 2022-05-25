@@ -1,5 +1,5 @@
 provider "kubernetes" {
-  version = "~> 1.10.0"
+  # version = "~> 1.10.0"
   host    = google_container_cluster.default.endpoint
   token   = data.google_client_config.current.access_token
   client_certificate = base64decode(
@@ -18,6 +18,7 @@ resource "kubernetes_namespace" "staging" {
 }
 
 resource "google_compute_address" "default" {
+  project = "sacred-armor-346113"
   name   = var.network_name
   region = var.region
 }
@@ -71,7 +72,7 @@ resource "kubernetes_replication_controller" "nginx" {
 
       spec {
         container {
-            # get image from https://hub.docker.com/_/nginx with latest tag
+            # image = "aclaputra/chatbot-tvlk:0.2"
             image = "nginx:latest"
             name  = "nginx"
 

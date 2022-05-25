@@ -1,6 +1,6 @@
 # instructions
+## Docker
 how to build docker images :
-in 
 ```bash 
 cd Bangkit-C22CB-Company-Based-Capstone/CC
 docker build -t chatbot-traveloka:0.1 .
@@ -29,4 +29,34 @@ docker exec -it [container_id] bash | docker exec -it [container_id] sh
 ls
 exit
 ```
+## Evicted Pods Problem
+if there is a fail container/pod with status evicted, write this command to delete all of them :
+```bash
+kubectl get pod | grep Evicted | awk '{print $1}' | xargs kubectl delete pod
+```
 
+## Artifact Registry
+how to pull from artifact registry :
+
+```bash
+gcloud auth configure-docker us-central1-docker.pkg.dev
+```
+now you got the permission and ready to pull it to local docker image
+```bash
+docker pull us-central1-docker.pkg.dev/sacred-armor-346113/chatbot-tvlk/chatbot-app:0.1
+```
+
+## Terraform
+Initialize a working directory containing Terraform configuration files. :
+```bash
+terraform init
+```
+evaluates a Terraform configuration to determine the desired state of all the resources it declares, then compares that desired state to the real infrastructure objects being managed with the current working directory and workspace :
+```bash
+terraform plan
+```
+
+terminates resources managed by your Terraform project :
+```bash
+terraform destroy
+```
