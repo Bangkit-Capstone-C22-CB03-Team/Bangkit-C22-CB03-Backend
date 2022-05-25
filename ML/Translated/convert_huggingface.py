@@ -10,7 +10,7 @@ for data in content["data"]:
         context = paragraph["context"]
         for qa in paragraph["qas"]:
             fill = {
-                "id":  qa["id"],
+                "id": qa["id"],
                 "title": title,
                 "context": context,
                 "question": qa["question"],
