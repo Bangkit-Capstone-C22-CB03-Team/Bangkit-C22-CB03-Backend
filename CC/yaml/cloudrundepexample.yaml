@@ -1,0 +1,63 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: chatbot
+  namespace: '140901377196'
+  selfLink: /apis/serving.knative.dev/v1/namespaces/140901377196/services/chatbot
+  uid: f2383a27-bfca-464e-8c61-7c5c1a875bdb
+  resourceVersion: AAXfz2Yn2Cc
+  generation: 2
+  creationTimestamp: '2022-05-25T05:31:05.888008Z'
+  labels:
+    cloud.googleapis.com/location: asia-southeast2
+  annotations:
+    run.googleapis.com/client-name: cloud-console
+    serving.knative.dev/creator: student-02-c4f8636e5c7c@qwiklabs.net
+    serving.knative.dev/lastModifier: student-02-c4f8636e5c7c@qwiklabs.net
+    client.knative.dev/user-image: asia-southeast2-docker.pkg.dev/qwiklabs-gcp-00-602b1d041152/chatbot-repo/chatbot@sha256:61fecb4656e8b60c2468db39437296c2b7eeffe888bce002e7fa6c4d1660551b
+    run.googleapis.com/ingress: all
+    run.googleapis.com/ingress-status: all
+spec:
+  template:
+    metadata:
+      name: chatbot-00002-sum
+      annotations:
+        run.googleapis.com/client-name: cloud-console
+        autoscaling.knative.dev/maxScale: '5'
+    spec:
+      containerConcurrency: 80
+      timeoutSeconds: 300
+      serviceAccountName: 140901377196-compute@developer.gserviceaccount.com
+      containers:
+      - image: asia-southeast2-docker.pkg.dev/qwiklabs-gcp-00-602b1d041152/chatbot-repo/chatbot@sha256:61fecb4656e8b60c2468db39437296c2b7eeffe888bce002e7fa6c4d1660551b
+        ports:
+        - name: http1
+          containerPort: 8080
+        resources:
+          limits:
+            cpu: 2000m
+            memory: 8Gi
+  traffic:
+  - percent: 100
+    latestRevision: true
+status:
+  observedGeneration: 2
+  conditions:
+  - type: Ready
+    status: 'True'
+    lastTransitionTime: '2022-05-25T05:32:28.664871Z'
+  - type: ConfigurationsReady
+    status: 'True'
+    lastTransitionTime: '2022-05-25T05:32:27.935538Z'
+  - type: RoutesReady
+    status: 'True'
+    lastTransitionTime: '2022-05-25T05:32:28.664871Z'
+  latestReadyRevisionName: chatbot-00002-sum
+  latestCreatedRevisionName: chatbot-00002-sum
+  traffic:
+  - revisionName: chatbot-00002-sum
+    percent: 100
+    latestRevision: true
+  url: https://chatbot-yjswunxlga-et.a.run.app
+  address:
+    url: https://chatbot-yjswunxlga-et.a.run.app
