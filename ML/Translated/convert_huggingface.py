@@ -1,6 +1,6 @@
 import json
 
-with open("ML/Translated/train-v2.0_indo.json") as f:
+with open("dev-v2.0_indo.json") as f:
     content = json.load(f)
 
 hf_data = []
@@ -26,5 +26,5 @@ for data in content["data"]:
 
             hf_data.append(fill)
 
-with open("hf_train-v2.0_indo.json", "w") as f:
+with open("hf_dev-v2.0_indo.json", "w") as f:
     json.dump({"data": hf_data}, f)
