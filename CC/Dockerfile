@@ -1,19 +1,33 @@
-FROM ubuntu:20.04
-
-RUN set -ex \
-  	&& sed -i -e "s%http://archive.ubuntu.com/ubuntu/%http://no.archive.ubuntu.com/ubuntu/%g" /etc/apt/sources.list \
-	&& apt-get update \
-	&& apt-get install -y \
- 			python3-pip \
- 			python3-dev \
- 			build-essential \
- 	&& apt-get clean \
- 	&& rm -rf /var/lib/apt/lists/* \
- 	&& pip3 install --upgrade pip
+FROM python:3.9-slim as build
 
 ENV APPPATH /opt/chatbot-tvlk
-COPY . $APPPATH
+
 WORKDIR $APPPATH/app
+
+RUN apt-get update && \
+	apt-get install -y --no-install-recommends \
+	gcc build-essential && \
+	apt-get clean && \
+	rm -rf /var/lib/apt/lists/* && \
+	pip3 install --upgrade pip
+
+RUN python -m venv /opt/chatbot-tvlk/app/venv
+
+ENV PATH="/opt/chatbot-tvlk/app/venv/bin:$PATH"
+
+COPY ./app/requirements.txt .
+
 RUN pip3 install -r requirements.txt
-ENTRYPOINT ["python3"]
-CMD ["src/app.py"]
+
+#final stage
+FROM python:3.9-slim
+
+WORKDIR /opt/chatbot-tvlk/app
+
+COPY --from=build /opt/chatbot-tvlk/app/venv ./venv
+
+COPY /app .
+
+ENV PATH="/opt/chatbot-tvlk/app/venv/bin:$PATH"
+
+CMD ["python3", "src/app.py" ]
