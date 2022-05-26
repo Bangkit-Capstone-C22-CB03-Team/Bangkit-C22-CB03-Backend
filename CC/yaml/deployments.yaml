@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chatbot-deployment
+  labels:
+    app: chatbot
+spec:
+  strategy:
+    type: Recreate
+  replicas: 1
+  selector:
+    matchLabels:
+      app: chatbot
+  template:
+    metadata:
+      labels:
+        app: chatbot
+    spec:
+      volumes:
+        - name: pvc-chatbot-volume
+          persistentVolumeClaim:
+            claimName: pvc-chatbot
+      containers:
+        - name: chatbot
+          image: asia-southeast2-docker.pkg.dev/latihan-cloud/traveloka-chatbot/traveloka-chatbot:0.1
+          env:
+            - name: TRANSFORMERS_CACHE
+              value: "/huggingface/cache/"
+          resources:
+            limits:
+              memory: 6Gi
+              cpu: 3
+            requests:
+              memory: 4Gi
+              cpu: 2
+          ports:
+            - containerPort: 8080
+          volumeMounts:
+            - mountPath: "/huggingface/cache/"
+              name: pvc-chatbot-volume
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: chatbot-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: chatbot
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
