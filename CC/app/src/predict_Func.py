@@ -4,7 +4,7 @@ from transformers import pipeline
 tokenizer = AutoTokenizer.from_pretrained(
     "bert-large-uncased-whole-word-masking-finetuned-squad")
 model = TFAutoModelForQuestionAnswering.from_pretrained(
-    "bert-large-uncased-whole-word-masking-finetuned-squad", return_dict=False)
+    "./bert_model/", return_dict=False)
     
 nlp = pipeline('question-answering', model=model, tokenizer=tokenizer)
 
