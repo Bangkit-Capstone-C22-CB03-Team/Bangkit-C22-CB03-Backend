@@ -13,3 +13,8 @@ provider "google" {
   region      = var.region
   zone        = var.zone
 }
+
+provider "google-beta" {
+  credentials = file("./keys/keys.json")
+  project     = var.project_id
+}
