@@ -20,3 +20,17 @@ variable "cloud_run_service_name" {
 variable "image" {
   type = string
 }
+
+variable "lb_name" {
+  type = string
+}
+
+variable "ssl" {
+  type    = bool
+  default = false
+}
+
+variable "domain" {
+  type    = string
+  default = "bangkit-chatbot-iemcoe.com"
+}
