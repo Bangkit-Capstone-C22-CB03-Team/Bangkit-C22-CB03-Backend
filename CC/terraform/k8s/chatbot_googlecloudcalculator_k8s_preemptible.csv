@@ -1,0 +1,13 @@
+name,quantity,region,service_id,sku,product_description,"unit_price, USD","total_price, USD"
+Spot Preemptible N2D AMD Instance Core running in Americas,5840,us-central1,6F81-5844-456A,0434-AD25-7163,CP-COMPUTEENGINE-VMIMAGE-N2D-HIGHMEM-8-PREEMPTIBLE,0.002773,16.194319999999998
+Spot Preemptible N2D AMD Instance Ram running in Americas,46720,us-central1,6F81-5844-456A,AFA5-CB36-99F6,CP-COMPUTEENGINE-VMIMAGE-N2D-HIGHMEM-8-PREEMPTIBLE,0.000372,17.379839999999998
+,,,,,,,
+,,,,,,Total Price:,33.57415999999999
+,,,,,,,
+"Prices are in US dollars, effective date is 2022-05-30T17:53:16.819Z.",,,,,,,
+,,,,,,,
+"The estimated fees provided by Google Cloud Pricing Calculator are for
+  discussion purposes only and are not binding on either you or Google.
+  Your actual fees may be higher or lower than the estimate.",,,,,,,
+,,,,,,,
+Url to the estimate:,https://cloud.google.com/products/calculator/#id=a8f2f65f-2b58-42c6-bf83-e48fdedd9fd7,,,,,,
