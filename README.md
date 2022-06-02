@@ -73,6 +73,8 @@ python3 -m venv venv
 source venv/bin/activate | source venv/Scripts/activate
 pip install -r requirements.txt
 ```
+### Our ML model result uploaded to Huggingface.co
+https://huggingface.co/Andaf/bert-uncased-finetuned-squad-indonesian?context=makanan+favorit+dita+adalah+spaghetti&question=apa+makanan+favorit+dita
 
 ## References
 
