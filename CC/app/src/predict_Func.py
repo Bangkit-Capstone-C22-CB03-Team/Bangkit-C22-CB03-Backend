@@ -1,13 +1,17 @@
 from transformers import TFAutoModelForQuestionAnswering, AutoTokenizer
 from transformers import pipeline
+from cloud_storage import download_model
+
+download_model()
 
 # Load from our deployed model in Huggingface.co
 tokenizer = AutoTokenizer.from_pretrained(
-    "Andaf/bert-uncased-finetuned-squad-indonesian")
+    "./ml_model/")
 model = TFAutoModelForQuestionAnswering.from_pretrained(
-    "Andaf/bert-uncased-finetuned-squad-indonesian", return_dict=False)
+    "./ml_model/", return_dict=False)
 
 nlp = pipeline('question-answering', model=model, tokenizer=tokenizer)
+
 
 def predict_func(question):
 
