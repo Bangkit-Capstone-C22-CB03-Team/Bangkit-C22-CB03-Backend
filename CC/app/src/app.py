@@ -4,6 +4,7 @@ from flask import Flask
 from flask_restful import Resource, Api, reqparse
 
 from predict_Func import predict_func
+# from predict_Func2 import predict_func -> If want to use model from Cloud Storage
 
 app = Flask(__name__)
 api = Api(app)

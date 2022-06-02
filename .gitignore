@@ -54,3 +54,4 @@ terraform-workspace.code-workspace
 
 #Ignore model test upload
 CC/app/src/bert_model
+CC/app/src/service-acc/
