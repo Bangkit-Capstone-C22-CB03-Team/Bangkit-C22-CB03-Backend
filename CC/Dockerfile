@@ -19,6 +19,8 @@ COPY ./app/requirements.txt .
 
 RUN pip3 install -r requirements.txt
 
+# RUN pip3 install --upgrade google-cloud-storage -> if using model from Cloud Storage
+
 #final stage
 FROM python:3.9-slim
 
