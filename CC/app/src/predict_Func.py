@@ -2,13 +2,13 @@ from transformers import TFAutoModelForQuestionAnswering, AutoTokenizer
 from transformers import pipeline
 from cloud_storage import download_model
 
-download_model()
+download_model('ml_model/', 'bert_model/')
 
 # Load from our deployed model in Huggingface.co
 tokenizer = AutoTokenizer.from_pretrained(
-    "./ml_model/")
+    "./bert_model/")
 model = TFAutoModelForQuestionAnswering.from_pretrained(
-    "./ml_model/", return_dict=False)
+    "./bert_model/", return_dict=False)
 
 nlp = pipeline('question-answering', model=model, tokenizer=tokenizer)
 
