@@ -1,12 +1,19 @@
+
+
+
+
+#load balancer
+
 module "lb-http" {
   source  = "GoogleCloudPlatform/lb-http/google//modules/serverless_negs"
   version = "~> 6.2.0"
   name    = var.lb-name
   project = var.project_id
 
-#   ssl                             = var.ssl
-#   managed_ssl_certificate_domains = [var.domain]
-#   https_redirect                  = var.ssl
+  # set var.ssl to false if want HTTP
+  ssl                             = var.ssl
+  managed_ssl_certificate_domains = [var.domain]
+  https_redirect                  = var.ssl
 
   backends = {
     default = {
@@ -44,21 +51,23 @@ resource "google_compute_region_network_endpoint_group" "serverless_neg" {
   }
 }
 
+# cloud run configuration
+
 resource "google_cloud_run_service" "default" {
   name     = "chatbot"
   location = var.region
   project  = var.project_id
   metadata {
     annotations = merge(
-        {
-            "run.googleapis.com/ingress" = var.ingress
-        }
+      {
+        "run.googleapis.com/ingress" = var.ingress
+      }
     )
   }
   template {
     spec {
       containers {
-        image = "us-central1-docker.pkg.dev/qwiklabs-gcp-03-65e72cae822e/chatbot-regis/chatbot:0.1"
+        image = var.image
         ports {
           container_port = 8080
         }
@@ -86,3 +95,4 @@ resource "google_cloud_run_service_iam_member" "member" {
   role     = "roles/run.invoker"
   member   = "allUsers"
 }
+

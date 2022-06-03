@@ -5,17 +5,17 @@ variable "project_id" {
 variable "region" {
   description = "Location for load balancer and Cloud Run resources"
   default     = "us-central1"
-  type = string
+  type        = string
 }
 
 variable "zone" {
-  type = string
+  type    = string
   default = "us-central1-a"
 }
 
 variable "ingress" {
-  type = string
-  default = "all"
+  type        = string
+  default     = "all"
   description = "Ingress setting for the service. Allowed values: 'all','internal','internal-and-cloud-load-balancing'"
 }
 
@@ -33,4 +33,12 @@ variable "domain" {
 variable "lb-name" {
   description = "Name for load balancer and associated resources"
   default     = "run-lb"
+}
+
+variable "cloud_run_service_name" {
+  type = string
+}
+
+variable "image" {
+  type = string
 }
