@@ -1,3 +1,3 @@
 output "load-balancer-ip" {
-  value = module.lb-http.external_ip
+  value = google_compute_global_address.default.address
 }
