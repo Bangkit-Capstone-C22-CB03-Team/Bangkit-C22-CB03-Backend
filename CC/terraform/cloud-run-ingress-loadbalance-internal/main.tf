@@ -1,51 +1,5 @@
-module "lb-http" {
-  source  = "GoogleCloudPlatform/lb-http/google//modules/serverless_negs"
-  version = "~> 6.2.0"
-  name    = var.lb-name
-  project = var.project_id
-
-#   ssl                             = var.ssl
-#   managed_ssl_certificate_domains = [var.domain]
-#   https_redirect                  = var.ssl
-
-  backends = {
-    default = {
-      description = null
-      groups = [
-        {
-          group = google_compute_region_network_endpoint_group.serverless_neg.id
-        }
-      ]
-      enable_cdn              = false
-      security_policy         = null
-      custom_request_headers  = null
-      custom_response_headers = null
-
-      iap_config = {
-        enable               = false
-        oauth2_client_id     = ""
-        oauth2_client_secret = ""
-      }
-      log_config = {
-        enable      = false
-        sample_rate = null
-      }
-    }
-  }
-}
-
-resource "google_compute_region_network_endpoint_group" "serverless_neg" {
-  provider              = google-beta
-  name                  = "serverless-neg"
-  network_endpoint_type = "SERVERLESS"
-  region                = var.region
-  cloud_run {
-    service = google_cloud_run_service.default.name
-  }
-}
-
 resource "google_cloud_run_service" "default" {
-  name     = "chatbot"
+  name     = var.cloud_run_service
   location = var.region
   project  = var.project_id
   metadata {
@@ -58,7 +12,7 @@ resource "google_cloud_run_service" "default" {
   template {
     spec {
       containers {
-        image = "us-central1-docker.pkg.dev/qwiklabs-gcp-03-65e72cae822e/chatbot-regis/chatbot:0.1"
+        image = "Container Image"
         ports {
           container_port = 8080
         }
@@ -77,7 +31,6 @@ resource "google_cloud_run_service" "default" {
   }
 }
 
-
 # Allow unauthenticated
 resource "google_cloud_run_service_iam_member" "member" {
   location = google_cloud_run_service.default.location
@@ -85,4 +38,52 @@ resource "google_cloud_run_service_iam_member" "member" {
   service  = google_cloud_run_service.default.name
   role     = "roles/run.invoker"
   member   = "allUsers"
+}
+
+# Load Balancing resources
+
+resource "google_compute_global_address" "default" {
+  name = "${var.name}-address"
+}
+
+resource "google_compute_global_forwarding_rule" "default" {
+  name = "${var.name}-fwdrule"
+
+  target = google_compute_target_http_proxy.default.id
+  port_range = "80"
+  ip_address = google_compute_global_address.default.address
+}
+
+resource "google_compute_backend_service" "default" {
+  name = "${var.name}-backend"
+
+  protocol = "HTTP"
+  port_name = "http"
+  timeout_sec = 30
+
+  backend {
+    group = google_compute_region_network_endpoint_group.cloudrun_neg.id
+  }
+}
+
+resource "google_compute_url_map" "default" {
+  name = "${var.name}-urlmap"
+
+  default_service = google_compute_backend_service.default.id
+}
+
+resource "google_compute_target_http_proxy" "default" {
+  name = "${var.name}-http-proxy"
+
+  url_map = google_compute_url_map.default.id
+}
+
+resource "google_compute_region_network_endpoint_group" "cloudrun_neg" {
+  provider = google-beta
+  name = "${var.name}-neg"
+  network_endpoint_type = "SERVERLESS"
+  region = var.region
+  cloud_run {
+    service = google_cloud_run_service.default.name
+  }
 }

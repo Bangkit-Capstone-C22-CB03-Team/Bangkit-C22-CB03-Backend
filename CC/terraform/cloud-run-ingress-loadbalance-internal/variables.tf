@@ -2,6 +2,12 @@ variable "project_id" {
   type = string
 }
 
+variable "name" {
+  description = "The name prefix for load balancer resources"  
+  type = string
+  default = "chatbot"
+}
+
 variable "region" {
   description = "Location for load balancer and Cloud Run resources"
   default     = "us-central1"
@@ -11,6 +17,12 @@ variable "region" {
 variable "zone" {
   type = string
   default = "us-central1-a"
+}
+
+variable "cloud_run_service" {
+  description = "the name of cloud run service"
+  type = string
+  default = "chatbot-tvlk"
 }
 
 variable "ingress" {
@@ -28,6 +40,7 @@ variable "ssl" {
 variable "domain" {
   description = "Domain name to run the load balancer on. Used if `ssl` is `true`."
   type        = string
+  default = null
 }
 
 variable "lb-name" {
