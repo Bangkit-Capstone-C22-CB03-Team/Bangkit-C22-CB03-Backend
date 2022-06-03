@@ -4,15 +4,15 @@ resource "google_cloud_run_service" "default" {
   project  = var.project_id
   metadata {
     annotations = merge(
-        {
-            "run.googleapis.com/ingress" = var.ingress
-        }
+      {
+        "run.googleapis.com/ingress" = var.ingress
+      }
     )
   }
   template {
     spec {
       containers {
-        image = "Container Image"
+        image = var.image
         ports {
           container_port = 8080
         }

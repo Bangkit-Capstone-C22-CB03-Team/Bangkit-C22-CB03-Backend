@@ -43,3 +43,5 @@ app/src/service-acc/
 app/src/testcloudstorage.py
 app/src/json.txt
 app/src/flask_sql.py
+app/src/cache
+app/locust/
