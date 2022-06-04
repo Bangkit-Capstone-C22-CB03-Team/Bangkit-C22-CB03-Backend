@@ -2,6 +2,7 @@ import os
 from google.cloud import storage
 
 # service account key for read object in cloud storage
+# set this if you want to try in local, comment if deploy to cloud run
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'key.json'
 
 storage_client = storage.Client()
