@@ -1,17 +1,16 @@
 from transformers import TFAutoModelForQuestionAnswering, AutoTokenizer
 from transformers import pipeline
-from cloud_storage import download_model
+from cloud_storage import download_file_from_bucket
 
-download_model('ml_model/', 'bert_model/')
+download_file_from_bucket('BUCKETNAME', 'BUCKETFOLDER/', 'bert_model/')
 
-# Load from our deployed model in Huggingface.co
+# Load from our deployed model in from Google Cloud Storage
 tokenizer = AutoTokenizer.from_pretrained(
     "./bert_model/")
 model = TFAutoModelForQuestionAnswering.from_pretrained(
     "./bert_model/", return_dict=False)
 
 nlp = pipeline('question-answering', model=model, tokenizer=tokenizer)
-
 
 def predict_func(question):
 

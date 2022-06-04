@@ -24,7 +24,7 @@ class TestPredict(Resource):
         return {'status': 'success', 'answer': answer, 'confidence': confidence}, 200
 
     def get(self):
-        return {'welcome': 'Welcome, what can I help you?'}
+        return {'welcome': 'Selamat datang, apa yang bisa saya bantu?'}
 
 
 api.add_resource(TestPredict, '/')
