@@ -9,16 +9,14 @@ RUN apt-get update && \
 	gcc build-essential && \
 	apt-get clean && \
 	rm -rf /var/lib/apt/lists/* && \
-	pip3 install --upgrade pip
-
-RUN python -m venv /opt/chatbot-tvlk/app/venv
+	pip3 install --upgrade pip && \
+	python -m venv /opt/chatbot-tvlk/app/venv
 
 ENV PATH="/opt/chatbot-tvlk/app/venv/bin:$PATH"
 
 COPY ./app/requirements.txt .
 
-RUN pip3 install -r requirements.txt && \
-	pip3 install --upgrade google-cloud-storage
+RUN pip3 install -r requirements.txt
 
 #final stage
 FROM python:3.9-slim
@@ -31,4 +29,6 @@ COPY /app .
 
 ENV PATH="/opt/chatbot-tvlk/app/venv/bin:$PATH"
 
-CMD ["python3", "src/app.py" ]
+WORKDIR /opt/chatbot-tvlk/app/src
+
+CMD ["python3", "app.py" ]
