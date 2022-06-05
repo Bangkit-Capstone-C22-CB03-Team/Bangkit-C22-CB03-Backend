@@ -4,7 +4,7 @@ sh create-cluster.sh
 ```
 run terraform to create configmap and pull the model from cloud storage bucket that we built before
 ```
-cd terraform
+cd deployments
 terraform init
 terraform plan
 terraform apply
@@ -17,5 +17,5 @@ kubectl get svc
 ```
 create HPA(Horizontal Pod Autoscaling) & test the model.
 ```
-sh load-test-model.sh
+sh load-test.sh
 ```

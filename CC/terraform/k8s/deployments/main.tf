@@ -12,7 +12,7 @@ resource "kubernetes_config_map_v1" "tfserving_configs" {
   data = {
     MODEL_NAME = "image_classifier"
 
-    MODEL_PATH = "gs://<bucket_name>/resnet_101"
+    MODEL_PATH = "gs://sacred-armor-346113-bucket/resnet_101"
   }
 }
 
@@ -49,7 +49,7 @@ resource "kubernetes_deployment" "image_classifier" {
           name  = "tf-serving"
           # pake container registry jgn artifact registry biar lebih public & bisa di pull
           image = "us-central1-docker.pkg.dev/sacred-armor-346113/chatbot-tvlk/chatbot-app:light"
-          args  = ["--model_name=$(MODEL_NAME)", "--model_base_path=$(MODEL_PATH)"]
+          # args  = ["--model_name=$(MODEL_NAME)", "--model_base_path=$(MODEL_PATH)"]
 
           port {
             name           = "http"
