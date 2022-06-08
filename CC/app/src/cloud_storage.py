@@ -15,7 +15,7 @@ def download_file_from_bucket(bucket_name, bucket_folder, save_path):
         bucket = storage_client.get_bucket(bucket_name)
         blobs = bucket.list_blobs(prefix=bucket_folder)
         for blob in blobs:
-
+            # print(f"{blob.name},{blob.generation}")
             filename = blob.name.split("/")
             if filename[1] == "":
                 continue

@@ -1,13 +1,24 @@
 #! python
 import os
+import time
 from flask import Flask
 from flask_restful import Resource, Api, reqparse
-
 from predict_Func import predict_func
 
 app = Flask(__name__)
 api = Api(app)
 
+def getpartofday(hour):
+    if (hour > 4) and (hour <= 12 ):
+        return 'Pagi'
+    elif (hour > 12) and (hour <= 16):
+        return'Siang'
+    elif (hour > 16) and (hour <= 20) :
+        return 'Sore'
+    elif (hour > 20) and (hour <= 24):
+        return'Malam'
+    elif (hour <= 4):
+        return'Malam'
 
 class TestPredict(Resource):
     def post(self):
@@ -18,10 +29,17 @@ class TestPredict(Resource):
         # location : querystring = "args"
         # location : headers = "headers"
         args = parser.parse_args()
-        answer, confidence = predict_func(args['msg'])
-        if(confidence < 0.1):
-            return {'status': 'failed', 'answer': answer, 'confidence': confidence}, 404
-        return {'status': 'success', 'answer': answer, 'confidence': confidence}, 200
+
+        if("hai" in args['msg'].lower() or "hello" in args['msg'].lower()):
+            _, _, _, hour,_ = map(int, time.strftime("%Y %m %d %H %M").split())
+            reply = "Hai, Selamat "+getpartofday(hour)+"! Perkenalkan nama saya SiLoka."
+            return {'status': 'success', 'answer': reply}, 200
+
+        else:
+            answer, confidence = predict_func(args['msg'])
+            if(confidence < 0.1):
+                return {'status': 'failed', 'answer': answer, 'confidence': confidence}, 404
+            return {'status': 'success', 'answer': answer, 'confidence': confidence}, 200
 
     def get(self):
         return {'welcome': 'Selamat datang, apa yang bisa saya bantu?'}
