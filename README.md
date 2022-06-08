@@ -15,6 +15,7 @@ Our team Consist of 9 people.
   - [Running Our Project in Local](#running-our-project-in-local)
     - [Using Conda (easier to build)](#using-conda-easier-to-build)
     - [Using PIP (not recommended, still experimental)](#using-pip-not-recommended-still-experimental)
+  - [Our ML model result uploaded to Huggingface.co](#our-ml-model-result-uploaded-to-huggingfaceco)
   - [References](#references)
 
 ## The Boys
@@ -73,8 +74,11 @@ python3 -m venv venv
 source venv/bin/activate | source venv/Scripts/activate
 pip install -r requirements.txt
 ```
-### Our ML model result uploaded to Huggingface.co
-https://huggingface.co/Andaf/bert-uncased-finetuned-squad-indonesian?context=makanan+favorit+dita+adalah+spaghetti&question=apa+makanan+favorit+dita
+
+## Our ML model result uploaded to Huggingface.co
+
+Here's our working model result uploaded to Huggingface.co
+[bert-uncased-finetuned-squad-indonesian](https://huggingface.co/Andaf/bert-uncased-finetuned-squad-indonesian?context=makanan+favorit+dita+adalah+spaghetti&question=apa+makanan+favorit+dita)
 
 ## References
 
