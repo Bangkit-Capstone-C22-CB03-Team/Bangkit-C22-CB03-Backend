@@ -2,8 +2,10 @@
 
 ## Step to build
 1. Build Google Cloud Storage bucket using Terraform
-2. Dockerize image
-3. Build Google Cloud Run using Terraform
+3. Upload model file to bucket
+4. Update config for application for bucketname and bucketfolder if changed
+5. Dockerize image
+6. Build Google Cloud Run using Terraform
 
 ### Note: make service account from GCP and create JSON key and put the key in the same directory with main app
 
