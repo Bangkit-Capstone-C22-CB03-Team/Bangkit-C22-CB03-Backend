@@ -1,9 +1,17 @@
 # instructions
+
+## Step to build
+1. Build Google Cloud Storage bucket using Terraform
+2. Dockerize image
+3. Build Google Cloud Run using Terraform
+
+### Note: make service account from GCP and create JSON key and put the key in the same directory with main app
+
 ## Docker
 how to build docker images :
 ```bash 
 cd Bangkit-C22CB-Company-Based-Capstone/CC
-docker build -t chatbot-traveloka:0.1 .
+docker build -t chatbot:0.1 .
 ```
 it will build ubuntu server and all the app configurations in Dockerfile
 
