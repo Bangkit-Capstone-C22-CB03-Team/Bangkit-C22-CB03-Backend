@@ -31,27 +31,28 @@ variable "ingress" {
   description = "Ingress setting for the service. Allowed values: 'all','internal','internal-and-cloud-load-balancing'"
 }
 
-variable "ssl" {
-  description = "Run load balancer on HTTPS and provision managed certificate with provided `domain`."
-  type        = bool
-  default     = false
-}
+# variable "ssl" {
+#   description = "Run load balancer on HTTPS and provision managed certificate with provided `domain`."
+#   type        = bool
+#   default     = false
+# }
 
-variable "domain" {
-  description = "Domain name to run the load balancer on. Used if `ssl` is `true`."
-  type        = string
-  default = null
-}
+# variable "domain" {
+#   description = "Domain name to run the load balancer on. Used if `ssl` is `true`."
+#   type        = string
+#   default = null
+# }
 
-variable "lb-name" {
-  description = "Name for load balancer and associated resources"
-  default     = "run-lb"
-}
+# variable "lb-name" {
+#   description = "Name for load balancer and associated resources"
+#   default     = "run-lb"
+# }
 
-variable "cloud_run_service_name" {
-  type = string
-}
+# variable "cloud_run_service_name" {
+#   type = string
+# }
 
 variable "image" {
   type = string
+  description = "Name of the dockerize image pushed in artifact registry"
 }

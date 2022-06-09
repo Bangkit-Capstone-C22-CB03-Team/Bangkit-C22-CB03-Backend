@@ -30,7 +30,7 @@ class TestPredict(Resource):
         # location : headers = "headers"
         args = parser.parse_args()
 
-        if("hai" in args['msg'].lower() or "hello" in args['msg'].lower()):
+        if("hai" in args['msg'].lower() or "hello" in args['msg'].lower() or "halo" in args['msg'].lower()):
             _, _, _, hour,_ = map(int, time.strftime("%Y %m %d %H %M").split())
             reply = "Hai, Selamat "+getpartofday(hour)+"! Perkenalkan nama saya SiLoka."
             return {'status': 'success', 'answer': reply}, 200
