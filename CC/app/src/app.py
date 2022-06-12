@@ -1,12 +1,20 @@
 #! python
 import os
 import time
+import re
 from flask import Flask
 from flask_restful import Resource, Api, reqparse
 from predict_Func import predict_func
 
 app = Flask(__name__)
 api = Api(app)
+
+regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
+
+def checkemail(email):
+	if(re.fullmatch(regex, email)):
+		return True
+	return False
 
 def getpartofday(hour):
     if (hour > 4) and (hour <= 12 ):
@@ -39,8 +47,11 @@ class TestPredict(Resource):
             answer, confidence = predict_func(args['msg'])
             if(confidence < 0.1):
                 return {'status': 'failed', 'answer': answer, 'confidence': confidence}, 404
-            return {'status': 'success', 'answer': answer, 'confidence': confidence}, 200
-
+            
+            if(checkemail(answer)):
+                return {'status': 'success', 'answer': answer, 'confidence': confidence}, 200
+            else:
+                return {'status': 'success', 'answer': answer.capitalize(), 'confidence': confidence}, 200
     def get(self):
         return {'welcome': 'Selamat datang, apa yang bisa saya bantu?'}
 
