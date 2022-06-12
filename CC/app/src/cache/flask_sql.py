@@ -4,34 +4,39 @@ from flask import Flask, request
 from flask_restful import Resource, Api
 from flask_sqlalchemy import SQLAlchemy
 # lib ini buat akses .env file
-from decouple import config
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__)
 api = Api(app)
-app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql+pymysql://{config("DB_USER")}:{config("DB_PASS")}@{config("DB_HOST")}/{config("DB_DATABASE")}'
+app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql+pymysql://{os.environ.get("DB_USER")}:{os.environ.get("DB_PASS")}@{os.environ.get("DB_HOST")}/{os.environ.get("DB_DATABASE")}'
 # config sqlalchemy_track_modifications agar notif deprecation warning tidak tampil
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 # Schema
+
+
 class User(db.Model):
     __tablename__ = 'user'
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(45), nullable=False)
-    phone = db.Column(db.String(45), nullable=False)
+    username = db.Column(db.String(45), nullable=False)
+    email = db.Column(db.String(255), nullable=False)
+    password = db.Column(db.String(32), nullable=False)
 
     # return agar menjadi json bukan jadi object class
     def to_json(self):
         return {
             'id': self.id,
-            'name': self.name,
-            'phone': self.phone
+            'username': self.username,
+            'email': self.email
         }
 
-
-db.create_all()
-
 # API
+
+
 class ShowData(Resource):
     def get(self):
         users = User.query.all()
@@ -56,7 +61,7 @@ class ShowData(Resource):
             'status': 'success',
             'message': 'Data berhasil ditambahkan'
         }, 201
-    
+
 
 api.add_resource(ShowData, '/')
 
