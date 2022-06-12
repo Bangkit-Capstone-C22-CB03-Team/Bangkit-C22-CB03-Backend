@@ -11,6 +11,7 @@ load_dotenv()
 
 app = Flask(__name__)
 api = Api(app)
+# database uri ke cloud sql
 app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql+pymysql://{os.environ.get("DB_USER")}:{os.environ.get("DB_PASS")}@{os.environ.get("DB_HOST")}/{os.environ.get("DB_DATABASE")}'
 # config sqlalchemy_track_modifications agar notif deprecation warning tidak tampil
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
