@@ -17,7 +17,7 @@ nlp = pipeline('question-answering', model=model, tokenizer=tokenizer)
 
 def predict_func(question):
 
-    context = "Makanan kesukaan saya adalah rendang."
+    context = "Sisa kamar hotel: 12. Kondisi hotel bersih, ruang resepsionis tidak ramai. Pembayaran dapat dilakukan melalui transfer bank atau membayar melalui minimarket. Penjadwalan ulang flight booking dapat dilakukan dengan mengirim email. Kirim email ke customer-service@traveloka.com"
 
     result = nlp(
         question=question,
