@@ -2,6 +2,7 @@
 import os
 import time
 import re
+import json
 from flask import Flask
 from flask_restful import Resource, Api, reqparse
 from predict_Func import predict_func
@@ -49,9 +50,15 @@ class TestPredict(Resource):
             answer, confidence = predict_func(args['msg'],args['categid'])
             res = [int(i) for i in answer.split() if i.isdigit()]
             if(res):
-                return {'status': 'success', 'answer': res[0] , 'confidence': confidence}, 200
+                file = open(os.path.join('faq-ans/',"ans-categ"+str(args['categid'])+".json"),'r')
+                ans = json.loads(file.read())
+                for i in ans['answer_list']:
+                    if(i['id'] == res[0]):
+                        answer = i['answer']
+                file.close()
+                return {'status': 'success', 'answer': answer , 'confidence': confidence}, 200
             else:
-                return {'status': 'failed', 'answer': answer}, 404
+                return {'status': 'failed', 'answer': "Maaf saya tidak bisa mengerti pertanyaan anda atau informasi belum tersedia"}, 404
 
     def get(self):
         return {'welcome': 'Selamat datang, apa yang bisa saya bantu?'}
