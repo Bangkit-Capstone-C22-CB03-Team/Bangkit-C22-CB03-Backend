@@ -33,6 +33,8 @@ class TestPredict(Resource):
         parser = reqparse.RequestParser()
         parser.add_argument(
             'msg', type=str, help='Cannot be empty', required=True, location='args')
+        parser.add_argument(
+            'categid', type=int, help='Cannot be empty', required=True, location='args')
         # location : body = "form"
         # location : querystring = "args"
         # location : headers = "headers"
@@ -44,14 +46,13 @@ class TestPredict(Resource):
             return {'status': 'success', 'answer': reply}, 200
 
         else:
-            answer, confidence = predict_func(args['msg'])
-            if(confidence < 0.1):
-                return {'status': 'failed', 'answer': answer, 'confidence': confidence}, 404
-            
-            if(checkemail(answer)):
-                return {'status': 'success', 'answer': answer, 'confidence': confidence}, 200
+            answer, confidence = predict_func(args['msg'],args['categid'])
+            res = [int(i) for i in answer.split() if i.isdigit()]
+            if(res):
+                return {'status': 'success', 'answer': res[0] , 'confidence': confidence}, 200
             else:
-                return {'status': 'success', 'answer': answer.capitalize(), 'confidence': confidence}, 200
+                return {'status': 'failed', 'answer': answer}, 404
+
     def get(self):
         return {'welcome': 'Selamat datang, apa yang bisa saya bantu?'}
 
