@@ -1,0 +1,12 @@
+{
+    "context_list": [
+        {
+            "id": 1,
+            "context": "Cara mengecek pembayaran sudah diterima adalah dengan 1 ; Untuk cara membayar booking / pemesanan / pesanan saya adalah dengan 2 ; Informasi detail mengenai akun bank Traveloka ada di 3 ; Untuk konfirmasi dan verifikasi pembayaran / payment dapat dengan 4 ; Anda harus memasukkan one-time password / OTP dalam transaksi anda karena 5 ; Anda akan / dapat menerima one-time password / OTP dengan cara 6 ; Cara mengklaim penggantian biaya untuk perjalanan bisnis / business travel saya adalah dengan 7 ; Ketika anda melakukan pembayaran dengan jumlah yang salah dapat mengikuti 8 ; Transaksi kartu kredit anda gagal karena 9 ; Kalau bukti pembayaran hilang maka lakukan cara 10 ; Biaya layanan maka 11 ; Kode unik = 12 ; "
+        },
+        {
+            "id": 2,
+            "context": "Cara mendapatkan promo terbaru di Traveloka adalah dengan 1 ; Cara mengatasi masalah tulisan kode promo tidak berlaku adalah dengan 2 ;"
+        }
+    ]
+}

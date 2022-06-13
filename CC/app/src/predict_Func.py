@@ -1,3 +1,4 @@
+import json
 from transformers import TFAutoModelForQuestionAnswering, AutoTokenizer
 from transformers import pipeline
 
@@ -15,9 +16,17 @@ model = TFAutoModelForQuestionAnswering.from_pretrained(
 nlp = pipeline('question-answering', model=model, tokenizer=tokenizer)
 
 
-def predict_func(question):
+def predict_func(question,categid):
 
-    context = "Sisa kamar hotel: 12. Kondisi hotel bersih, ruang resepsionis tidak ramai. Pembayaran dapat dilakukan melalui transfer bank atau membayar melalui minimarket. Penjadwalan ulang flight booking dapat dilakukan dengan mengirim email. Kirim email ke customer-service@traveloka.com"
+    f = open('context.json','r')
+    data = json.loads(f.read())
+
+    for i in data['context_list']:
+        if(i['id'] == categid):
+            context = i['context']
+            break
+    
+    f.close()
 
     result = nlp(
         question=question,
@@ -27,3 +36,5 @@ def predict_func(question):
     answer = result['answer']
     confidence = result['score']
     return answer, confidence
+
+# print(predict_func("Apa itu biaya layanan?",1))
