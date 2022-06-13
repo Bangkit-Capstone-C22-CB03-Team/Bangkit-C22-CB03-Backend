@@ -1,0 +1,52 @@
+{
+    "answer_list": [
+        {
+            "id": 1,
+            "answer": "Dengan melakukan login akun traveloka, kemudian anda dapat menemukan status pembayaran anda melalui pemesanan saya dan jika tidak ditemukan, anda dapat menemukannya dengan mengklik retrieve booking di halaman utama traveloka."
+        },
+        {
+            "id": 2,
+            "answer": "Bayar pemesanan Anda dengan mengikuti langkah-langkah berikut:\n\n1. Setelah melengkapi detail pemesanan Anda, pilih metode pembayaran yang Anda inginkan.\n2. Ketuk tombol Bayar dengan.\n\nPastikan untuk melunasi pembayaran Anda sebelum batas waktu berakhir.\nUntuk memeriksa berapa banyak waktu yang tersisa untuk menyelesaikan pembayaran Anda, buka Daftar Pembelian.\n\nUntuk membayar pemesanan Anda dengan ATM, ikuti langkah-langkah berikut:\n\n1. Setelah Anda menyelesaikan detail pemesanan Anda, pilih ATM di halaman pembayaran.\n2. Ketuk Bayar dengan ATM.\n3. Pastikan untuk memasukkan kode bank yang benar, nomor rekening bank Traveloka, dan jumlah transaksi yang tepat, kemudian lanjutkan dengan transfer.\n\nPembayaran dengan ATM tersedia 24/7.\n\nUntuk membayar pemesanan Anda dengan kartu kredit, ikuti langkah-langkah berikut:\n\n1. Setelah Anda menyelesaikan detail pemesanan Anda, pilih Kartu Kredit di halaman pembayaran.\n2. Isi detail kartu kredit Anda, lalu ketuk Bayar dengan Kartu Kredit.\n\nSetelah pembayaran kartu kredit Anda selesai, Anda akan menerima e-tiket/voucher di alamat email yang Anda gunakan untuk pemesanan dalam waktu 60 menit.\n\nUntuk membayar menggunakan metode Transfer, ikuti langkah-langkah berikut:\n\n1. Ketuk Bayar Dengan Transfer setelah memilih bank Anda. Harap selesaikan pembayaran Anda sebelum batas waktu berakhir.\n2. Batas waktu terletak di halaman Selesaikan Pembayaran.\n3. Pilih Transfer di menu bank Anda. Transfer dapat dilakukan melalui ATM, mobile banking, atau online banking.\n4. Isikan nomor rekening Traveloka yang terdaftar di bawah PT. Trinusa Travelindo. Kemudian, masukkan jumlah pembayaran persis seperti yang tercantum pada faktur Anda ke tiga digit terakhir.\n5. Isi Booking ID Anda di kolom nomor referensi di ATM atau online banking/m-banking."
+        },
+        {
+            "id": 3,
+            "answer": "Jika Anda memilih Transfer atau ATM sebagai metode pembayaran saat pemesanan, Anda akan melihat instruksi pembayaran beserta detail rekening bank Traveloka. Instruksi pembayaran yang sama juga akan dikirimkan ke email Anda.\n\nPastikan jumlah transfer Anda masuk ke rekening bank atas nama PT Trinusa Travelindo."
+        },
+        {
+            "id": 4,
+            "answer": "Pembayaran Anda dikonfirmasikan saat Anda menerima e-tiket/voucher di email Anda.\n\nJika Anda belum menerima e-tiket/voucher dalam waktu 60 menit setelah menyelesaikan pembayaran, kemungkinan Anda salah memasukkan one-time password (OTP) (jika Anda membayar dengan kartu kredit), nomor rekening yang salah, atau jumlah yang salah (jika Anda membayar melalui transfer bank).\n\nBagaimanapun, harap unggah bukti pembayaran Anda agar tim kami dapat melakukan pemeriksaan lebih lanjut. Berikut cara mengunggah bukti pembayaran di situs web desktop Traveloka.\n\n1. Ketuk akun Anda di sudut kanan atas halaman dan pilih Daftar Pembelian.\n2. Pilih pemesanan yang baru saja Anda bayar dan klik Lanjutkan ke Pembayaran. Gulir ke bawah untuk Menyelesaikan Pembayaran Anda? dan klik Saya Telah Menyelesaikan Pembayaran.\n3. Klik Unggah Bukti Pembayaran. Pilih file yang ingin Anda unggah, dan klik Buka. Anda akan dapat melihat status pembayaran Anda di Pesanan Saya.\n\nPembayaran Anda harus diverifikasi dan Anda akan menerima e-tiket/voucher dalam waktu sekitar 15 menit setelah Anda mengunggah bukti pembayaran."
+        },
+        {
+            "id": 5,
+            "answer": "Dalam keadaan tertentu, seperti ketika bank penerbit kartu kredit Anda melihat aktivitas transaksi yang tidak biasa, bank tersebut perlu memverifikasi transaksi Anda untuk memastikan bahwa Anda adalah pemilik kartu kredit yang sah. Untuk pengguna yang berbasis di Malaysia, memasukkan OTP adalah wajib. Yakinlah bahwa semua ini dilakukan untuk memastikan keamanan pembayaran Anda."
+        },
+        {
+            "id": 6,
+            "answer": "Kata sandi satu kali (OTP) akan dikirim melalui SMS oleh bank penerbit kartu kredit Anda. Setelah Anda menerima kata sandi, silakan masukkan segera untuk memastikan kelancaran transaksi."
+        },
+        {
+            "id": 7,
+            "answer": "Untuk memudahkan klaim penggantian biaya Anda, kami dapat memberikan surat referensi kepada atasan Anda yang menginformasikan total harga transaksi Anda dan bahwa transaksi tersebut sah dan dibayarkan ke Traveloka.\n\nUntuk meminta surat referensi, silakan kunjungi tautan ini https://www.traveloka.com/contactus dan berikan kami perincian di bawah ini:\n\n1. ID Pemesanan Traveloka Anda\n2. Nama perusahaan dan alamat lengkap Anda\n3. Nomor kontak Anda\n4. Nomor telepon kantor Anda\n5. Nomor Pokok Wajib Pajak (NPWP) Anda\n\nPenting untuk dicatat bahwa kami tidak dapat mengubah tanda terima apa pun."
+        },
+        {
+            "id": 8,
+            "answer": "Jika Anda telah melakukan jumlah pembayaran yang salah, Anda dapat Menghubungi Kami (https://www.traveloka.com/en/contactus). Mohon siapkan detail transaksi Anda, seperti:\n\n- ID Pemesanan\n- Nama bank dan nomor rekening yang digunakan untuk melakukan transfer\n- Nama pemegang akun\n- Jumlah pembayaran yang ditransfer\n- Nama bank Traveloka dan nomor rekening tujuan transfer dana\n- Tanggal dan waktu transaksi\n- Saluran transfer (ATM/internet banking/mobile banking)\n- Bukti pembayaran"
+        },
+        {
+            "id": 9,
+            "answer": "Terkadang butuh waktu lebih lama untuk memproses pembayaran Anda. Jika transaksi pertama Anda tidak berhasil, silakan muat ulang halaman dan coba lakukan pembayaran kembali.\n\nHarap pastikan bahwa Anda memasukkan detail kartu kredit yang benar (nama pemegang kartu dan nomor kartu) sebelum mencoba melakukan pembayaran lagi. Juga, jika kode otorisasi bank diperlukan, pastikan Anda memasukkan kode yang benar.\n\nJika transaksi Anda masih gagal, periksa apakah:\n\n1) Anda memiliki batas kartu kredit yang cukup.\n2) Kartu kredit Anda dapat digunakan untuk transaksi e-commerce.\n3) Anda memiliki koneksi internet yang stabil selama transaksi.\n\nJika Anda memerlukan bantuan lebih lanjut, harap berikan detail lebih lanjut kepada kami melalui tautan ini https://www.traveloka.com/en/contactus."
+        },
+        {
+            "id": 10,
+            "answer": "Jika bukti pembayaran Anda tidak ada, harap Hubungi Kami untuk memverifikasi pembayaran Anda. Sebelum menghubungi kami, mohon siapkan beberapa informasi terkait transaksi Anda, seperti:\n\n1) Nama bank dan nomor rekening yang digunakan untuk melakukan transfer\n2) Nama pemegang akun\n3) Saluran transfer (ATM/Internet Banking/Mobile Banking)\n4) Tanggal dan waktu transaksi\n5) Nama bank Traveloka dan nomor rekening tujuan transfer dana\n6) Jumlah pembayaran (termasuk 3 digit terakhir)\n7) ID Pemesanan"
+        },
+        {
+            "id": 11,
+            "answer": "Biaya layanan adalah biaya tambahan yang dikenakan untuk kenyamanan memiliki Layanan Pelanggan 24 jam yang tersedia untuk Anda ketika Anda membeli tiket kereta api dan penerbangan, memesan hotel, dan membayar tagihan Anda di Traveloka.\n\nAnda akan menemukan biaya layanan dalam rincian harga Anda setelah Anda melanjutkan ke pembayaran."
+        },
+        {
+            "id": 12,
+            "answer": "Kode unik akan muncul jika Anda memilih Transfer Bank sebagai metode pembayaran. Kode unik adalah jumlah nominal 3 digit yang ditambahkan ke total harga setiap pemesanan yang membuat pemesanan unik dari yang lain. Kode unik dalam harga total Anda membantu kami mempercepat proses verifikasi pembayaran Anda.\n\nOleh karena itu, jika Anda menggunakan Transfer Bank sebagai metode pembayaran, harap selalu pastikan untuk mentransfer jumlah yang tepat, termasuk 3 digit terakhir."
+        }
+    ]
+}
