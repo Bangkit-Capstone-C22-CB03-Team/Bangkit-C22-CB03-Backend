@@ -1,0 +1,31 @@
+options:
+  logging: CLOUD_LOGGING_ONLY
+steps:
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      [
+        "build",
+        "-t",
+        "asia-southeast2-docker.pkg.dev/latihan-cloud/traveloka-chatbot/traveloka-chatbot:$SHORT_SHA",
+        ".",
+      ]
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      [
+        "push",
+        "asia-southeast2-docker.pkg.dev/latihan-cloud/traveloka-chatbot/traveloka-chatbot:$SHORT_SHA",
+      ]
+  - name: "gcr.io/cloud-builders/gcloud"
+    args:
+      [
+        "run",
+        "deploy",
+        "chatbot-cloud-run",
+        "--image",
+        "asia-southeast2-docker.pkg.dev/latihan-cloud/traveloka-chatbot/traveloka-chatbot:$SHORT_SHA",
+        "--platform",
+        "managed",
+        "--region",
+        "us-central1",
+        "--allow-unauthenticated",
+      ]
