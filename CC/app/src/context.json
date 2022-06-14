@@ -7,6 +7,18 @@
         {
             "id": 2,
             "context": "Cara mendapatkan promo terbaru di Traveloka adalah dengan 1 ; Cara mengatasi masalah tulisan kode promo tidak berlaku adalah dengan 2 ;"
+        },
+        {
+            "id": 3,
+            "context": "Kupon Traveloka / Traveloka Coupons merupakan / adalah 1 ; Cara untuk bisa mendapatkan kupon tersebut yaitu dengan 2 ;"
+        },
+        {
+            "id": 4,
+            "context": "Metode - metode pembayaran untuk transaksi dalam rupiah yang tersedia yaitu 1 ; Perbedaan antara metode pembayaran transfer dan ATM adalah 2 ; Untuk dapat menyelesaikan pembayaran ketika tidak mempunyai kartu ATM BCA, BNI, BRI, atau Mandiri yaitu dengan 3 ; Cara membayar pemesanan / booking melalui Indomaret atau Alfamart adalah dengan 4 ;"
+        },
+        {
+            "id": 5,
+            "context": "Traveloka QR code scanner merupakan / adalah 1 ; Kode Traveloka QR yang didukung terdiri dari 2 ; Ketika kode QR tidak dikenali maka dapat diatasi dengan 3 ;"
         }
     ]
 }
