@@ -1,6 +1,7 @@
 #! python
 import os
-import time
+import datetime
+import pytz
 import re
 import json
 from flask import Flask
@@ -48,10 +49,15 @@ class TestPredict(Resource):
         args = parser.parse_args()
 
         if(args['categid'] == 0):
+<<<<<<< HEAD
             _, _, _, hour, _ = map(
                 int, time.strftime("%Y %m %d %H %M").split())
             reply = "Hai, Selamat " + \
                 getpartofday(hour)+"! Perkenalkan nama saya SiLoka."
+=======
+            hour =datetime.datetime.now(pytz.timezone('Asia/Jakarta')).hour
+            reply = "Hai, Selamat "+getpartofday(hour)+"! Perkenalkan nama saya SiLoka."
+>>>>>>> b5fc7cf78f420275066da69a6da22fe4bf98cee8
             return {'status': 'success', 'answer': reply}, 200
 
         else:

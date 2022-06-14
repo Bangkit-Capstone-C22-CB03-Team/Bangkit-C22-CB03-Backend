@@ -1,0 +1,16 @@
+{
+    "answer_list": [
+        {
+            "id": 1,
+            "answer": "Pemindai kode QR Traveloka dapat membaca kode QR milik Traveloka dan mitranya. Anda dapat menggunakan pemindai untuk menemukan informasi lebih lanjut tentang produk atau layanan Traveloka dan untuk membuka diskon khusus di acara atau merchant mitra Traveloka.\n\nUntuk menggunakan pemindai kode QR, cukup ketuk ikon di kanan atas halaman awal Traveloka App Anda, aktifkan izin kamera, dan pindai kode QR."
+        },
+        {
+            "id": 2,
+            "answer": "Pemindai kode QR Traveloka dapat digunakan untuk membaca kode QR milik Traveloka dan mitranya. Saat ini, Anda dapat menggunakan pemindai kode QR di tempat-tempat berikut:\n\n+ Merchant mitra Traveloka Eats\n+ Stan Traveloka di bandara dan pusat perbelanjaa\n+ Acara Traveloka"
+        },
+        {
+            "id": 3,
+            "answer": "Pastikan Anda telah memperbarui Traveloka App ke versi terbaru dan bahwa kode QR yang Anda pindai adalah milik Traveloka atau mitranya."
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+{
+    "answer_list": [
+        {
+            "id": 1,
+            "answer": "Kami menerima opsi pembayaran berikut:\n\n- Transfer (ATM/SMS Banking/e-Banking/teller bank)\n- ATM (semua ATM berlogo Bersama, Prima dan Alto)\n- Kartu Kredit (Visa/Mastercard)\n- Internet Banking (BCA KlikPay, Mandiri ClickPay dan CIMB Clicks)\n- Toko Indomaret\n- Toko Alfamart\n- Saldo UANGKU\n\nHarap pastikan jumlah transfer Anda masuk ke rekening bank atas nama PT Trinusa Travelindo, dan BUKAN ke rekening bank pribadi. Waspadalah terhadap penipuan."
+        },
+        {
+            "id": 2,
+            "answer": "Metode pembayaran Transfer tersedia dari pukul 02:00 - 21:00 WIB, sedangkan metode pembayaran ATM tersedia selama 24 jam.\n\nJika memilih ATM, pastikan melakukan transfer melalui ATM berlogo ATM Bersama, Prima dan Alto (lihat daftar bank).\n\nJika Anda memilih Transfer (termasuk Internet/SMS/mobile banking dan teller bank), pastikan untuk mentransfer hanya ke rekening BCA, BRI, BNI atau Bank Mandiri dengan nama 'PT Trinusa Travelindo'."
+        },
+        {
+            "id": 3,
+            "answer": "Jika Anda tidak memiliki kartu ATM tersebut, Anda dapat mentransfer pembayaran Anda melalui ATM lain dalam jaringan ATM Bersama, Prima dan Alto. Harap dicatat bahwa Anda mungkin akan dikenakan biaya transfer, tergantung pada bank Anda.\n\nAtau, Anda dapat melakukan pembayaran di konter di toko Indomaret dan Alfamart mana pun."
+        },
+        {
+            "id": 4,
+            "answer": "Untuk membayar pemesanan Anda melalui Indomaret atau Alfamart, ikuti langkah-langkah berikut:\n\n1. Setelah Anda menyelesaikan detail pemesanan, pilih Indomaret atau Alfamart di halaman pembayaran.\n2. Ketuk Bayar di Indomaret/Alfamart.\n3. Kunjungi Indomaret/Alfamart terdekat dan tunjukkan kode pembayaran Anda ke kasir. Kemudian, lakukan pembayaran. Pastikan untuk meminta tanda terima kepada kasir.\n\nSetelah pembayaran Anda di Indomaret atau Alfamart selesai, e-tiket/voucher Traveloka Anda dan tanda terima akan dikirimkan ke alamat email yang Anda gunakan untuk pemesanan dalam waktu 60 menit.\n\nHal-hal yang perlu diperhatikan:\n\n> Untuk setiap transaksi, Alfamart mengenakan biaya Rp2.500 sedangkan Indomaret mengenakan biaya Rp5.000.\n> Pembayaran melalui Indomaret atau Alfamart hanya tersedia untuk transaksi hingga Rp5.000.000."
+        }
+    ]
+}

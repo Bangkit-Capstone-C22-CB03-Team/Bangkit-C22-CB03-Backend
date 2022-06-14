@@ -36,5 +36,3 @@ def predict_func(question,categid):
     answer = result['answer']
     confidence = result['score']
     return answer, confidence
-
-# print(predict_func("Apa itu biaya layanan?",1))
