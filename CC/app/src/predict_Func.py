@@ -1,6 +1,7 @@
 import json
 from transformers import TFAutoModelForQuestionAnswering, AutoTokenizer
 from transformers import pipeline
+from firestore import get_context
 
 from config import BUCKET_NAME, BUCKET_FOLDER
 from cloud_storage import download_file_from_bucket
@@ -18,15 +19,7 @@ nlp = pipeline('question-answering', model=model, tokenizer=tokenizer)
 
 def predict_func(question,categid):
 
-    f = open('context.json','r')
-    data = json.loads(f.read())
-
-    for i in data['context_list']:
-        if(i['id'] == categid):
-            context = i['context']
-            break
-    
-    f.close()
+    context = get_context(categid)
 
     result = nlp(
         question=question,

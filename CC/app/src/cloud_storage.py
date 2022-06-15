@@ -7,7 +7,6 @@ os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'key.json'
 
 storage_client = storage.Client()
 
-
 def download_file_from_bucket(bucket_name, bucket_folder, save_path):
     os.makedirs(save_path, exist_ok=True)
 
