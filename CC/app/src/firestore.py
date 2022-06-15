@@ -10,7 +10,8 @@ def get_answer(categ_id,answer_id):
     
     for doc in docs:
         answer = doc.to_dict()
-        return answer['answer']
+        answer = answer['answer'].replace("\\n","\n")
+        return answer
 
 def get_context(categ_id):
     docs = db.collection(u'contexts').where(u'id', u'==', categ_id).stream()
